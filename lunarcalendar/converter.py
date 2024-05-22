@@ -58,7 +58,7 @@ class Solar(object):
     def __eq__(self, other):
         _other = Converter.Lunar2Solar(other) if isinstance(other, Lunar) else other
         if not isinstance(_other, Solar):
-            raise NotImplemented
+            raise NotImplementedError
         return (self.year == _other.year and
                 self.month == _other.month and
                 self.day == _other.day)
@@ -97,7 +97,7 @@ class Lunar(object):
     def __eq__(self, other):
         _other = Converter.Solar2Lunar(other) if isinstance(other, Solar) else other
         if not isinstance(_other, Lunar):
-            raise NotImplemented
+            raise NotImplementedError
         return (self.year == _other.year and
                 self.month == _other.month and
                 self.day == _other.day and
