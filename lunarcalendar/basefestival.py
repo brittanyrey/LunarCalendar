@@ -35,14 +35,14 @@ class Festival(object):
         ''' get the first name in the target language '''
         lang = zh_map(lang)
         if lang not in self.langs:
-            raise NotImplemented
+            raise NotImplementedError
         return self.langs[lang][0]
 
     def get_lang_list(self, lang):
         ''' get the name list in the target language '''
         lang = zh_map(lang)
         if lang not in self.langs:
-            raise NotImplemented
+            raise NotImplementedError
         return self.langs[lang]
 
     def __call__(self, year):
